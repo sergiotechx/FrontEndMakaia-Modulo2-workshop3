@@ -1,7 +1,8 @@
 import React from 'react'
 import "./header.scss"
 import logo from "/public/images/logo.svg"
-import { SlButton, SlDropdown, SlMenu, SlMenuItem } from '@shoelace-style/shoelace/dist/react';
+import { SlButton, SlIcon,SlDropdown, SlMenu, SlMenuItem } from '@shoelace-style/shoelace/dist/react';
+
 
 
 const Header = () => {
@@ -20,9 +21,11 @@ const Header = () => {
           <h1>IMMERSIVE EXPERIENCES THAT DELIVER </h1>
         </div>
         <SlDropdown>
-          <SlButton  slot="trigger" caret>
-            Options
+        <SlButton  slot="trigger" caret>
+        <SlIcon slot="prefix" name="list"></SlIcon>
+        
           </SlButton>
+         
           <SlMenu>
             <SlMenuItem>About</SlMenuItem>
             <SlMenuItem>Careers</SlMenuItem>
