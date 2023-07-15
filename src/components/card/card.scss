@@ -4,7 +4,11 @@
     position:relative;
     width: 22%;
     justify-content: space-between;
-    background-color: aqua;
+    &:hover {
+        
+        cursor: pointer;
+        transform: scale(1.009, 1.009);
+      }
     img{
        width: 100%; 
     }

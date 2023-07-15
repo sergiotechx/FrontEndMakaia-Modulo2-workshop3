@@ -105,7 +105,7 @@ let cardsInitMob = [
 ];
 
 const Body = () => {
-  const [cards, setCards] = useState(null);
+  const [cards, setCards] = useState([{}]);
 
   const handleResize = () => {
     setImages();
@@ -123,9 +123,9 @@ const Body = () => {
   }
 
   useEffect(() => {
-
+    setImages();
     window.addEventListener("resize", handleResize);
-    console.log("aca!");
+   
 
   }, []);
 
@@ -143,14 +143,16 @@ const Body = () => {
         <button>See All</button>
       </div>
       <div className='BodyContainer'>
-        {
-          cards?.map((card, index) => {
-            return (
-              <Card key={card.id} image={card.src} text={card.text} />
-            )
-          }
-          )
-        }
+      { console.log("que tengo",cards)}
+      {
+        
+        cards?.map((card, index) => {
+           return (
+             <Card key={card.id} image={card.src} text={card.text} />
+           )
+         }
+         )
+       }
 
       </div>
 
