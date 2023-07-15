@@ -33,7 +33,7 @@ const Header = () => {
             <SlMenuItem>Products</SlMenuItem>
             <SlMenuItem>Support</SlMenuItem>
           </SlMenu>
-        </SlDropdown>
+        </SlDropdown> 
 
 
 

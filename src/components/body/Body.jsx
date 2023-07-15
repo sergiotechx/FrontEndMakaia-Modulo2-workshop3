@@ -18,7 +18,7 @@ import imgmob7 from "/public/images/mobile/image-curiosity.jpg"
 import imgmob8 from "/public/images/mobile/image-fisheye.jpg"
 import "./body.scss"
 import { useState, useEffect } from 'react'
-import Card from '../card/Card.jsx'
+import Card from '../card/Card.jsx' 
 let cardsInitDesk = [
   {
     id: 1,
