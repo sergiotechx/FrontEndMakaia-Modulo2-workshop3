@@ -1,38 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Josefin+Sans+Italic&display=swap');
 
 
-.containerMain{
-    padding: 6rem 5rem;
-    .figureContainer{
+.containerMain {
+    width: calc(100% - 9rem);
+    display: flex;
+    flex-direction: column;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+
+ 
+
+    .figureContainer {
+        width: 100%;
         position: relative;
         display: flex;
-        img{
-            //position: relative;
+        flex-direction: row;
+       
+
+        img {
+            align-self: flex-end;
+            width: 100%;
         }
-        .divText{
+
+        .divText {
             position: absolute;
             background-color: #fff;
-            top: 9.5rem;
+            bottom: 0;
             right: 13rem;
             width: 40%;
-            height: 75%;
-            z-index: 2; /* Asegura que el div superpuesto esté encima de la imagen de fondo */
+            height: fit-content;
+            z-index: 2;
+            /* Asegura que el div superpuesto esté encima de la imagen de fondo */
             padding-left: 3rem;
             padding-top: 2.5rem;
             margin-top: 0;
-            h2{
-               font-size: 3.5rem;
-               font-family: 'Josefin Sans', sans-serif;
-               font-weight: lighter;
+
+            h2 {
+                font-size: 3.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: lighter;
             }
-            h3{
-                
-            }
+
+            
         }
-        .back1{
-                width: 50%;
-                height: auto;
-                z-index: 1; /* Asegura que la imagen de fondo esté detrás del div superpuesto */
+
+        .back1 {
+            width: 50%;
+            height: auto;
+            z-index: 1;
+            /* Asegura que la imagen de fondo esté detrás del div superpuesto */
         }
-    } 
+    }
+
+    .BodyHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 6rem;
+        padding-left: 3rem;
+        padding-right: 10rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: lighter;
+        }
+
+        button {
+            color: black;
+            background-color: white;
+            height: fit-content;
+            padding: 1rem;
+        }
+
+        button:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+    .BodyContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 3rem;
+        gap:1rem;
+      
+    }
 }
