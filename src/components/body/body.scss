@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Josefin+Sans+Italic&display=swap');
+
+
+.containerMain {
+    padding: 6rem 5rem;
+    padding-left: 10rem;
+
+    .figureContainer {
+
+        position: relative;
+        display: flex;
+
+        .divText {
+            position: absolute;
+            background-color: #fff;
+            bottom:0;
+            right: 3rem;
+            width: 50%;
+            height: fit-content;
+            z-index: 2;
+            padding-left: 3rem;
+            padding-top: 1rem;
+            margin-top: 0;
+            overflow-x: hidden; /* Agregar esta propiedad para evitar desborde*/
+            font-family: 'Josefin Sans', sans-serif;  
+
+            h2 {
+                font-size: 3.5rem;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: lighter;
+            }
+            p {
+                margin: 0;
+                font-size: 1.02rem;
+                font-weight: lighter;
+                opacity: 0.5;
+              }
+        }
+        .back1 {
+            width: 50%;
+            height: auto;
+            z-index: 1;
+            /* Asegura que la imagen de fondo esté detrás del div superpuesto */ 
+        }
+    }
+
+    .BodyHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 6rem;
+        padding-left: 3rem;
+        padding-right: 10rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: lighter;
+        }
+
+        button {
+            color: black;
+            background-color: white;
+            height: fit-content;
+            padding: 1rem;
+        }
+
+        button:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+
+    .BodyContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 3rem;
+        gap: 1rem;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .containerMain {
+      padding: 4rem 2rem;
+      padding-left: 2rem;
+  
+      .figureContainer {
+        flex-direction: column;
+  
+        .divText {
+        position: relative;
+          width: 100%;
+          right: auto;
+          bottom: auto;
+          padding: 2rem;
+          text-align: center;
+          justify-content: center;
+          right: 3rem;
+  
+          h2 {
+            font-size: 2.5rem;
+          }
+        }
+  
+        .back1 {
+          width: 100%;
+        }
+      }
+  
+      .BodyHeader {
+        
+        padding: 1rem;
+        justify-content: center;
+        text-align: center;
+        margin-top: 4rem;
+        .button{
+            position: relative;
+            top:108rem;
+            right: 5rem;
+        }
+  
+        h2 {
+          position: relative;
+          left: 3rem;
+        }
+  
+      
+      }
+  
+      .BodyContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column; 
+        width: 400%;
+        right:1rem ;
+      }
+    }
+  
+    .nav {
+      .container {
+        flex-direction: column;
+        gap: 0;
+        
+        ul {
+          display: none;
+        }
+  
+        .cuadroDeTexto {
+          position: static;
+          margin-top: 2rem;
+          text-align: center;
+  
+          h1 {
+            width: 100%;
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }

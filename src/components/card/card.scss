@@ -1,0 +1,24 @@
+.CardBody{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    width: 22%;
+    justify-content: space-between;
+    &:hover {
+        
+        cursor: pointer;
+        transform: scale(1.009, 1.009);
+      }
+    img{
+       width: 100%; 
+    }
+    p{
+        position: absolute;
+        color:white;
+        bottom:0;
+        font-size: 1.5rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: lighter;
+        
+    }
+}  
