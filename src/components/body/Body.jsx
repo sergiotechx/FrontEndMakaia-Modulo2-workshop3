@@ -1,4 +1,3 @@
-import React from 'react'
 import back1 from "/public/images/desktop/image-interactive.jpg"
 import imgdesk1 from "/public/images/desktop/image-deep-earth.jpg"
 import imgdesk2 from "/public/images/desktop/image-night-arcade.jpg"
@@ -18,7 +17,7 @@ import imgmob7 from "/public/images/mobile/image-curiosity.jpg"
 import imgmob8 from "/public/images/mobile/image-fisheye.jpg"
 import "./body.scss"
 import { useState, useEffect } from 'react'
-import Card from '../card/Card.jsx'
+import Card from '../card/Card.jsx' 
 let cardsInitDesk = [
   {
     id: 1,
@@ -105,29 +104,28 @@ let cardsInitMob = [
 ];
 
 const Body = () => {
-  const [cards, setCards] = useState(null);
+  const [cards, setCards] = useState([{}]);
 
   const handleResize = () => {
     setImages();
   }
 
   const setImages = () => {
-    if (window.innerWidth < 400) {
+    if (window.innerWidth < 800) {
       setCards(cardsInitMob);
-      console.log("under 400");
+      console.log("under 768");
     }
     else {
       setCards(cardsInitDesk);
-      console.log("upper 400");
+      console.log("upper 768");
     }
   }
 
   useEffect(() => {
-
+    setImages();
     window.addEventListener("resize", handleResize);
-    console.log("aca!");
 
-  }, []);
+  }, );
 
   return (
     <div className="containerMain">
@@ -140,21 +138,23 @@ const Body = () => {
       </figure>
       <div className='BodyHeader'>
         <h2>OUR CREATIONS</h2>
-        <button>See All</button>
+        <button className="button">See All</button>
       </div>
       <div className='BodyContainer'>
-        {
-          cards?.map((card, index) => {
-            return (
-              <Card key={card.id} image={card.src} text={card.text} />
-            )
-          }
-          )
-        }
+      { console.log("que tengo",cards)}
+      {
+        
+        cards?.map((card) => {
+           return (
+             <Card key={card.id} image={card.src} text={card.text} />
+           )
+         }
+         )
+       }
 
       </div>
 
-    </div>
+    </div> 
   )
 }
 
